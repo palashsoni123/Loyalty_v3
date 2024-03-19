@@ -1,26 +1,15 @@
 "use client"
 
-import React, { useContext, useState } from 'react';
-import { AppProvider } from '@shopify/polaris';
-import en from "@shopify/polaris/locales/en.json";
+import React, { useContext} from 'react';
 import Pre_Login from './PreLogin'
 import { motion } from 'framer-motion';
-import RootLayout from '../layout';
 import { UserContext } from './context/UserContext';
-import UserContextPovider from './context/UserProvider';
 
 export default function Loyalty_Widget() {
 
-    // Widget Visiblity Button Function 
-    // const [isBoxVisible, setBoxVisibility] = useState(false);
-    // const toggleFavWidget = () => {
-    //     console.log("called")
-    //     console.log(isBoxVisible)
-    //     setBoxVisibility(!isBoxVisible);
-    // };
     const value:any=useContext(UserContext)
     console.log(value)
-    const {isBoxVisible,setBoxVisibility,toggleFavWidget}:any=value;
+    const {isBoxVisible,toggleFavWidget}:any=value;
 
 
     // console.log(isBoxVisible)

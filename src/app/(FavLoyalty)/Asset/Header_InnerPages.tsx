@@ -27,12 +27,6 @@ export default function Header(props: HeaderProps) {
         setCurrentPage(page);
     };
 
-    // // Widget Visiblity Button Function 
-    // const [isBoxVisible, setBoxVisibility] = useState(false);
-    // const toggleFavWidget = () => {
-    //     setBoxVisibility(!isBoxVisible);
-    //     console.log("setBoxVisibility")
-    // };
     const value:any=useContext(UserContext)
     // console.log(value)
     const {toggleFavWidget}:any=value;
@@ -92,7 +86,6 @@ export default function Header(props: HeaderProps) {
             )
             }
             {currentPage === 'Home' && <Pre_Login />}
-            {/* {currentPage === 'Home' && <Post_Login />} */}
             {currentPage === 'Earn' && <WaystoEarnScreen />}
             {currentPage === 'Redeem' && <WaystoRedeemScreen />}
 
