@@ -1,107 +1,1953 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
+/* Apply box-sizing and default font styles to all elements */
 * {
   box-sizing: border-box;
-  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: .9rem;
+}
+
+/* Set the body height to 200vh */
+body {
+  height: 200vh;
+}
+
+/* Custom styles for the header box */
+.CustomWizard-BoxHead {
+  border-radius: 20px 20px 0px 0px !important;
+  height: 141px;
+  padding: 25px 20px 20px 20px;
+  background: linear-gradient(95deg, #b5ffed -168.81%, #007F5F 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Styles for the right area in the header */
+.CustomWizard-BoxHead .HeaderRight-Area {
+  padding: 10px 20px 0px 0px;
+  cursor: pointer;
+}
+
+.HeaderRight-Area button {
+  border: 0;
+  background-color: transparent;
+}
+
+
+/* Set text and icon color in the header */
+.CustomWizard-BoxHead .Polaris-Text--root,
+.CustomWizard-BoxHead span.Polaris-Icon svg path {
+  color: #fff !important;
+}
+
+.CustomWizard-BoxHead span.Polaris-Icon {
   margin: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* Style for the open/close button */
+.CustomWizard-OpenClose__Btn .WidgetIconArea .WidgetIcon {
+  box-shadow: 0px 0.48px 2.41px -0.38px rgba(0, 0, 0, 0.1), 0px 4px 20px -0.75px rgba(0, 0, 0, 0.17);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
+/* Styles for the loyalty card */
+.FavLoyalty_card {
+  background-color: #fff;
+  border-radius: 8px;
   text-decoration: none;
+  padding: 18px 15px;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, .06);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(11, 11, 11, 0.825);
+  margin: 15px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  cursor: default;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+
+/* Styles for the widget area */
+.FavWidget_Area {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: fixed;
+  bottom: 20px;
+  width: 380px;
+  float: right;
+  right: 20px;
+}
+
+/* Styles for the widget box within the widget area */
+.FavWidget_Area .FavWidget_Box {
+  padding: 0px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  margin: 0;
+  height: 620.88px;
+  max-height: 620.88px;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.FavWidget_Box.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Styles for the widget body */
+.widget_body {
+  padding: 0px 8px;
+  height: 800px;
+  z-index: 20;
+}
+
+/* Styles for the welcome text in the header */
+.CustomWizard-BoxHead .Welcome_MainLine {
+  color: white;
+  font-weight: 550;
+  line-height: 1.6;
+  font-size: 1rem;
+  padding-left: 8px;
+}
+
+.CustomWizard-BoxHead .Welcome_SubLine {
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  padding-left: 12px;
+}
+
+/* Styles for the join area */
+.Join_Area {
+  margin-top: -45px;
+  padding: 20 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+/* Styles for the join area headline */
+.Join_Area_Headline {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: .9;
+  line-height: 1.3;
+}
+
+/* Styles for the SVG in the join area */
+.Join_Area_Svg {
+  height: 120px;
+  width: 250px;
+  margin: auto;
+  padding-top: 15px;
+}
+
+/* Common styles for various areas */
+.Join_Area,
+.Redeem_Area,
+.Earn_Area,
+.VIP_Program,
+.Refer_Earn {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transition: 200ms;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+
+/* Hover styles for specific areas */
+.Redeem_Area:hover,
+.Earn_Area:hover,
+.VIP_Program:hover,
+.Refer_Earn:hover {
+  background-color: #FBFBFB;
+  /* Original background color */
+}
+
+/* Styles for cards in the same line */
+.sameLine_cards {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 16px;
+  gap: 16px;
+}
+
+/* Styles for specific areas with width set to 50% */
+.Redeem_Area,
+.Earn_Area {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 50%;
+}
+
+/* Styles for specific elements within the loyalty card */
+.FavLoyalty_card .Carg_svg {
+  padding-right: 5px;
+}
+
+.FavLoyalty_card .card_name {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+
+}
+
+.VIP_Program .card_name {
+  padding-left: 5px;
+}
+
+/* Styles for the join area action section */
+.Join_Area_Action {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Styles for widget icon */
+.WidgetIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(60deg, #b5ffed -168.81%, #007F5F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for widget balloon */
+.FavWidget_Balloon {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: end;
+}
+
+.FavWidget_Balloon button {
+  border: 0;
+  background-color: transparent;
+}
+
+/* Styles for login button in join area action */
+.Join_Area_Action .LogIn_Button {
+  font-size: 0.85rem;
+  font-weight: 450;
+  opacity: .8;
+  line-height: 1;
+}
+
+.Join_Area_Action .LogIn_Button a {
+  font-size: .85rem;
+  font-weight: 650;
+  opacity: .9;
+  line-height: 1;
+  text-decoration: none;
+  color: #00523e;
+}
+
+/* Material UI Button Styles for specific button */
+.buttonMUI_joinnowhome .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  margin: auto;
+  height: 35px;
+  padding: 0px 40px;
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 8px;
+  font-weight: 550;
+  font-size: .8rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 100ms;
+  box-sizing: border-box;
+}
+
+
+/* Style for inner header starts */
+
+
+.Widget_InnerPagesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(95deg, #b5ffed -168.81%, #007F5F 100%);
+  height: 80px;
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.Widget_InnerPagesHeader button {
+  border: 0px;
+  background-color: transparent;
+}
+
+.InnerPagesHeaderLeft_Area {
+  display: flex;
+  align-items: center;
+}
+
+.Back_Button {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.Header_Text {
+  display: flex;
+  flex-direction: column;
+}
+
+.Heading_Text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.Subheading_Text {
+  font-size: 12px;
+  font-weight: 450;
+}
+
+/* Style for inner header ends */
+
+
+/* Styles for the EarnRedeem card Starts */
+
+.EarnRedeem_card {
+  background-color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 20px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(11, 11, 11, 0.825);
+  margin: 15px 15px 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transition: 200ms;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+
+.EarnRedeem_card:hover {
+  background-color: #f9f9f9;
+}
+
+.Card_Text {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.Card_Heading {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333cb;
+  line-height: 1.2;
+  font-weight: 550;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1px;
+}
+
+.Card_SubText {
+  font-size: 12px;
+  color: #666666dd;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 11px;
+  color: #666;
+}
+
+.Card_Button {
+  background: linear-gradient(95deg, #b5ffed -168.81%, #007F5F 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: scale(.9);
+}
+
+.Card_Button:hover {
+  background: linear-gradient(95deg, #b5ffed -168.81%, #007F5F 100%);
+}
+
+/* Styles for the EarnRedeem card Ends */
+
+
+
+/* Styles for the Earn Screen Starts */
+.EarnScreen{
+  height: 700px;
+  /* margin-bottom: 1000px; */
+}
+
+.EarnScreen-widget_body {
+  height: 520px;
+  overflow: scroll;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  /* margin-bottom: 800px; */
+}
+
+/* Styles for the Earn Screen Ends */
+
+
+/* Refer widget area starts */
+
+
+.ReferEarn_SwitchTabs {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.5px solid #00000048;
+}
+
+.Tab_Refer,
+.Tab_History,
+.Tab_FAQ {
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0px;
+}
+
+.Tab_Refer:hover,
+.Tab_History:hover,
+.Tab_FAQ:hover {
+  background-color: #f0f0f05e;
+}
+
+.Tab_Refer.active,
+.Tab_History.active,
+.Tab_FAQ.active {
+  /* background-color: #f0f0f0; */
+  color: #171717;
+  border-bottom: 2.5px solid #079370;
+}
+
+
+.refer-switchtabs {
+  height: 40px;
+  border-bottom: 1px solid rgb(140, 140, 140);
+  /* background-color: orange; */
+  margin: -20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  margin-bottom: 0px;
+  font-size: 95%;
+
+  span {
+    /* border-bottom: 2.5px solid #202223; */
+    padding-bottom: 10px;
+    width: 22%;
+    text-align: center;
+    cursor: pointer;
+
+  }
+
+  .active {
+    border-bottom: 2.5px solid #202223;
+    padding-bottom: 9px;
+    width: 22%;
+    text-align: center;
   }
 }
+
+.referral-steps {
+  background-color: #ECF5F3;
+  padding: 16px;
+  padding-bottom: 40px;
+  transform: scale(.99);
+
+
+}
+
+.referral-steps .header {
+  color: #818181;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.step1,
+.step2,
+.step3 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.step1,
+.step2,
+.step3 {
+
+  .left-area {
+    /* border: 1px solid green; */
+    width: 80px;
+    display: flex;
+    justify-content: start;
+    padding: 5px 0px 5px 0px;
+  }
+
+  .right-area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-area .lineone {
+    color: #818181;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: -10px;
+  }
+
+  .right-area .linetwo {
+    background-color: #219653;
+    margin-top: 3px;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 22px;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 1px 5px;
+    margin-top: 1px;
+  }
+
+}
+
+.referral-codearea {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: -45px;
+  z-index: 1;
+
+
+  .code-preview {
+    font-size: 12px;
+    width: 55%;
+    max-height: 45px;
+    box-sizing: border-box;
+    border-radius: 12px 0px 0px 12px;
+
+  }
+
+  .FavLoyalty_card {
+    margin: 0;
+  }
+
+}
+
+.buttonMUI_copycode .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  margin: auto;
+  height: 35px;
+  padding: 0px 10px;
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 550;
+  font-size: .8rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 100ms;
+  box-sizing: border-box;
+  border-radius: 0px 10px 10px 0px;
+  height: 45px;
+  width: 90px;
+}
+
+
+.share-socialarea {
+  margin-top: 10px;
+}
+
+.share-socialarea .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  font-size: .85rem;
+}
+
+.social-icons {
+  width: 250px;
+  margin: auto;
+}
+
+.social-icons ul {
+  display: flex;
+  list-style-type: none;
+  width: 50%;
+  margin: auto;
+  padding-left: 0px;
+
+  li {
+    cursor: pointer;
+  }
+}
+
+.referEarnCustomWizard-BoxHead {
+  border-radius: 0.75rem 0.75rem 0 0;
+  height: 90px;
+  padding: 0px 20px !important;
+  display: flex;
+  align-items: center;
+  width: 380px;
+  height: 90px !important;
+
+}
+
+.Referral_Screen {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+
+/* refer widget area ends */
+
+
+/* Refer_history Widget Area Starts */
+
+
+.History_Screen .FavLoyalty_card {
+  padding: 13px;
+}
+
+.ReferHistory-header h3 {
+  font-size: 100%;
+  font-weight: 600;
+}
+
+.Available-Rewards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left-area {
+    padding: 0;
+    margin-top: -10px;
+  }
+}
+
+.ReferredPoints-area {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 12px;
+}
+
+.PointsViaReferral {
+  font-size: 18px;
+  margin-left: 5px;
+  font-weight: 700;
+  color: #007F5F;
+
+}
+
+.ReferHistory-Area .header {
+  font-size: 100%;
+  margin: 5px 0px 10px 10px;
+}
+
+.referral-profileCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.History_Screen .FavLoyalty_card {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  margin: 16px;
+}
+
+
+.list-view .FavLoyalty_card {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  margin: 15px 16px 0px 16px;
+
+}
+
+.left-area {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1px;
+}
+
+.date {
+  font-size: 11px;
+  color: #666;
+}
+
+
+.right-area {
+  display: flex;
+
+  .points-to-referred {
+    font-size: 110%;
+    font-weight: 700;
+  }
+}
+
+/* Refer_history Widget Area Ends */
+
+
+
+/* tier widget area starts */
+
+.VIP_Screen {
+  padding: 0px;
+}
+
+.existing_tierBadge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.existing_tierText {
+  color: #202223;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 650;
+  line-height: 22.601px;
+  /* 113.006% */
+
+}
+
+
+.Tier-upper-area {
+  background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, #DEE2E8 100%);
+  opacity: var(--size-025, 1);
+  height: 250px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 380px;
+  margin: auto;
+  margin-bottom: -95px;
+  padding-top: 20px;
+}
+
+.All_Tier_Display {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  padding: 20px;
+  gap: 20px;
+}
+
+.exising_pointsData {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.Point_toNextTier {
+  color: 616161;
+  font-size: .85rem;
+  font-weight: 300;
+}
+
+.Silver_Tier,
+.Gold_Tier,
+.Platnium_Tier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+  /* border: 1px solid #ccc; */
+  margin: 10px 0px 8px 0px;
+
+
+  .left-area {
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+  }
+
+  .tier-badge {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #007F5F;
+    border-radius: 50%;
+    padding: 5px;
+
+  }
+
+  .tier-name {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    align-items: flex-start;
+
+    .lineone {
+      color: rgba(0, 0, 0, 0.88);
+    }
+
+    .linetwo {
+      color: grey;
+      font-weight: 300;
+      font-size: .85rem;
+      line-height: 1.3;
+    }
+  }
+
+  .right-area {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.Platnium_Tier {
+
+  .tier-badge {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #bbbbbbbf;
+    border-radius: 50%;
+    padding: 5px;
+
+  }
+
+}
+
+.Tierconnecting-line {
+  border: 1px dashed #007F5F;
+  height: 20px;
+  width: 0px;
+  position: relative;
+  left: -92px;
+  top: 40px;
+}
+
+/* .upcoming_tiers {
+  padding: 0px 16px;
+} */
+
+
+/* tier widget area ends */
+
+
+/*------------------------------
+ keyword-search
+------------------------------*/
+.keyword-search {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto 0;
+}
+
+.keyword-search__inner {
+  width: 100%;
+}
+
+.keyword-search__form {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.keyword-search__text {
+  display: block;
+  width: calc(100% - 100px);
+  color: #333333;
+  font-size: 16px;
+  line-height: 50px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px 0px 0px 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.keyword-search__button {
+  display: block;
+  width: 100px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+  background-color: #313131;
+  border-radius: 0px 4px 4px 0px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+}
+
+.wrapper {
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.accordion-wrapper {
+  margin-top: 5px;
+  padding: 0px 10px;
+
+  &+* {
+    margin-top: 10px;
+  }
+}
+
+.accordion-item {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+  height: auto;
+  max-height: 9999px;
+}
+
+.accordion-item.collapsed {
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-title {
+  font-weight: 500;
+  cursor: pointer;
+  color: #787878;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 100%;
+  padding: 12px 10px;
+  gap: 10px;
+  line-height: 1.5;
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid currentColor;
+  }
+
+  &:hover,
+  &.open {
+    color: rgba(0, 0, 0, 0.796);
+  }
+
+  &.open {
+    &::after {
+      content: "";
+      border-top: 0;
+      border-bottom: 5px solid;
+    }
+  }
+}
+
+.accordion-content {
+  padding: 12px 10px;
+  font-weight: 400;
+  font-size: 100%;
+}
+
+
+
+/* Style for Fix Discount Starts*/
+
+.value-enter-area {
+  width: 98%;
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+
+}
+
+.value-input {
+  width: 75%;
+  padding-right: 10px;
+
+  .Polaris-TextField__Input {
+    height: 35px;
+    border-radius: 5px;
+  }
+}
+
+.redeem-button-submit {
+  width: 35%;
+}
+
+.collect-button-submit {
+  width: 190px;
+  margin: auto;
+  margin-bottom: 5px;
+  height: 38px;
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+
+
+.Polaris-FormLayout {
+  display: grid;
+  gap: 10px;
+  margin-top: -5px;
+}
+
+
+
+
+.buttonMUI_save .css-sghohy-MuiButtonBase-root-MuiButton-roo:hover {
+  background: #007f5f8a;
+}
+
+.buttonMUI_fixedDiscount .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  margin: auto;
+  height: 35px;
+  padding: 0px 25px;
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: .85rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 100ms;
+  box-sizing: border-box;
+}
+
+
+
+.FixDiscount_inputStyles {
+  height: 35px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 450;
+  line-height: 1.5rem;
+  letter-spacing: initial;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex: 1 1;
+  width: 100%;
+  min-width: 0;
+  min-height: 2rem;
+  padding: 0.375rem 0.75rem;
+  background: none;
+  border: none;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  -webkit-appearance: none;
+  appearance: none;
+  caret-color: rgba(48, 48, 48, 1);
+  color: rgba(48, 48, 48, 1);
+  align-items: center;
+  border: 1.2px solid rgba(118, 118, 118, 0.435);
+
+}
+
+.range-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: -10px;
+  font-size: 0.7rem;
+
+}
+
+.range-item {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  opacity: 0.7;
+}
+
+.range-item span {
+  font-size: 1rem;
+  font-weight: 650;
+  opacity: 1;
+}
+
+.redeem-termsconditions_box {
+  margin: 10px 16px;
+
+  span {
+    font-size: .8rem;
+  }
+}
+
+.redeem-termsconditions_ul {
+  padding-left: 10px;
+  opacity: 0.7;
+  margin-top: 10px;
+  /* list-style-type: none; */
+  line-height: 1.4;
+}
+
+.redeem-termsconditions_ul li {
+  font-size: .8rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.redeem-button-submit {
+  width: 100px;
+  margin: auto;
+  height: 35px;
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+.RedeemScreen-widget_body {
+  height: 800px;
+}
+
+.Slider_Area {
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+
+}
+
+.FixDiscountScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.FixDiscountBody {
+  padding: 0;
+  margin: 0;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
+}
+
+
+.Terms_Condition_Box {
+  padding: 5px;
+}
+
+.Range-Slider-Area-Widget {
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* .css-t92pqs-MuiSlider-root {} */
+
+/* Style for Fix Discount Ends*/
+
+
+/* Style for Percentage Discount Starts */
+.buttonMUI_save .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 5px;
+  height: 40px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007F5F;
+  border-radius: 5px;
+  font-weight: 550;
+  font-size: .85rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 100ms;
+  border: 1.6px solid #007F5F;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.buttonMUI_save .css-sghohy-MuiButtonBase-root-MuiButton-roo:hover {
+  background: #007f5f8a;
+}
+
+.buttonMUI_redeem {
+  width: 49%;
+  box-sizing: border-box;
+}
+
+.buttonMUI_save {
+  width: 49%;
+  box-sizing: border-box;
+}
+
+.buttonMUI_redeem .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 5px;
+  height: 40px;
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: .85rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 100ms;
+  box-sizing: border-box;
+}
+
+.coupon-termsconditions_box {
+  margin: 10px 6px 0px 6px;
+  font-size: 0.75rem;
+}
+
+.Coupon-Code-Area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background-color: #ECF5F3;
+  border-radius: 2px;
+  padding: 2px 10px;
+}
+
+.coupon-code {
+  font-size: .75rem;
+  color: #007F5F;
+  font-weight: 600;
+}
+
+.coupon-actions {
+  display: flex;
+}
+
+.coupon-actions div {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  align-items: center;
+  padding-left: 8px;
+  font-size: .7rem;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: .7;
+  box-sizing: border-box;
+  transition: 100ms;
+}
+
+.coupon-actions div:hover {
+  opacity: 1;
+  font-weight: 650;
+  box-sizing: border-box;
+}
+
+.coupon-actionButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.PercentageDiscountbody {
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
+  height: 800px;
+  padding: 0px 0px;
+
+}
+
+.PercentageDiscountbody .upper-area .FavLoyalty_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* Style for Percentage Discount Ends */
+
+
+/* Style for Shipping Discount Starts */
+
+.ShippingDiscountbody {
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
+  height: 800px;
+  padding: 0px 0px;
+
+}
+
+.ShippingDiscountbody .upper-area .FavLoyalty_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+
+/* Style for Shipping Discount Ends */
+
+
+
+/* Widget Home Screen Style */
+
+.HeaderLeft-Area-PreLogin {
+  color: white;
+  padding: 0px 10px 10px 0px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.HeaderLeft-Area-AfterLogin {
+  color: white;
+  padding: 10px 10px 10px 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.Points_Area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -60px;
+}
+
+.Card_Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.Card_Header_Title {
+  font-size: 1rem;
+}
+
+.Point_History_SVG {
+  width: 18px;
+  height: 17px;
+  padding-left: 10px;
+}
+
+.Point_Count {
+  display: flex;
+  align-items: center;
+  color: #007F5F;
+  padding-left: 5px;
+}
+
+.Available_Points {
+  font-size: 1.7rem;
+}
+
+.Available_Points_Value {
+  padding: 5px 0px 0px 5px;
+  color: grey;
+  font-weight: 400;
+}
+
+.Widget_Home_Screen_Body .Refer_Earn {
+  gap: 20px;
+}
+
+.Refer_Earn .card_name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 5px;
+}
+
+.Refer_Earn .card_name .lineTwo {
+  font-weight: 300;
+  font-size: .85rem;
+  padding-top: 4px;
+  opacity: .7;
+}
+
+.lineOneRefer {
+  display: flex;
+  align-items: center;
+}
+
+.lineTwoRefer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.lineTwoRefer .left_area span {
+  font-weight: 400;
+  opacity: .7;
+}
+
+.lineTwoRefer .right_area {
+  display: flex;
+  align-items: center;
+
+
+  span {
+    padding-right: 2px;
+  }
+}
+
+.referral_history_icon {
+  display: flex;
+  align-items: center;
+}
+
+
+/* HomeScreen Carousel Style Starts */
+
+.css-1m9128y {
+  transform: scale(.8);
+  margin-top: 30px;
+}
+
+.SliderThree,
+.SliderTwo,
+.SliderOne {
+  margin-top: 0;
+  height: 120px;
+}
+
+/* HomeScreen Carousel Style Ends*/
+
+
+
+/* Free Product Style Starts */
+
+.FreeProductsbody {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Two columns */
+  box-sizing: border-box;
+  overflow: scroll;
+  height: 520px;
+
+}
+
+.FreeProductsbody div {
+  display: flex;
+}
+
+.productTile {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.ProductImg {
+  width: 150px;
+  height: 120px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+
+.ProductName {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ProductValue {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.ProductValue .FreeText {
+  color: #3C8A3C;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-right: 5px;
+}
+
+.ProductValue .PriceText {
+  text-decoration: line-through;
+}
+
+.ProductPointValue {
+  font-size: 12px;
+  color: #0c0c0c;
+  background-color: #FFBC0F;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-top: 5px;
+
+
+}
+
+.ProductPointValue .leftArea {
+  font-size: .8rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.ProductPointValue .rightArea {
+  font-size: .9rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-right: 5px;
+}
+
+/* Free Product Style Ends */
+
+
+
+
+/* Point History Style Starts */
+
+.Point_History_Card {
+  display: flex;
+  flex-direction: column;
+
+  .lineOne,
+  .lineTwo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lineTwo .leftArea,
+  .lineTwo .rightArea {
+    padding: 5px;
+    font-size: 11px;
+    /* border: 1px solid red; */
+    color: rgb(91, 91, 91);
+    font-weight: 500;
+  }
+
+  .leftArea,
+  .rightArea {
+    padding: 5px;
+  }
+
+  .ActivityName,
+  .ActivityPoints {
+    font-weight: bold;
+  }
+
+  .ActivityPoints.Credited {
+    color: green;
+  }
+
+  .ActivityPoints.Debited {
+    color: rgb(182, 0, 0);
+  }
+}
+
+
+.Point_Activity {
+  height: 370px;
+  overflow: scroll;
+  margin-top: 10px;
+}
+
+
+.PointCountBox {
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Align items vertically */
+
+}
+
+.PointCountBox .lineOne {
+  font-weight: bold;
+}
+
+.PointCountBox .lineOne .label {
+  font-weight: 600;
+  opacity: .8;
+
+}
+
+.PointCountBox .lineOne .value {
+  font-size: 1rem;
+  padding-left: 5px;
+
+}
+
+.PointCountBox .lineTwo .label {
+  font-weight: 600;
+  opacity: .8;
+
+}
+
+.PointCountBox .lineTwo {
+  display: flex;
+  gap: 20px;
+}
+
+.pointCollectCount,
+.pointSpentCount {
+  margin-top: 10px;
+}
+
+.pointCollectCount .label,
+.pointSpentCount .label {
+  font-weight: bold;
+}
+
+.pointCollectCount .value,
+.pointSpentCount .value {
+  margin-left: 5px;
+  color: green;
+  font-size: 1rem;
+
+}
+
+.pointSpentCount .value {
+  color: rgb(182, 0, 0);
+  font-size: 1rem;
+}
+
+.Point_Activity_Area .heading {
+  display: block;
+  width: 90%;
+  margin: 0px auto 10px auto;
+}
+
+
+.PointsActivity_header {
+  background-color: #fff;
+  border-radius: 0px;
+  text-decoration: none;
+  padding: 18px 15px;
+  box-shadow: 0 8px 13px -5px rgba(0, 0, 0, .06) !important;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(11, 11, 11, 0.825);
+  margin: 0px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  cursor: default;
+  margin: 0px !important;
+  margin-bottom: 20px !important;
+}
+
+
+
+.Point_History_Body {
+  padding: 0 !important;
+}
+
+/* Point History Style Ends */
+
+
+/* Style for Celebrate Birthday Feature Starts*/
+
+.Celebrate_Birthday_body .FavLoyalty_card {
+  gap: 20px;
+  display: flex;
+}
+
+.buttonMUI_Birthday .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  padding: 20px 40px;
+  margin: auto;
+  margin-bottom: 5px;
+  height: 40px;
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: .85rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 100ms;
+}
+
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+  padding: 16.5px 14px;
+  padding-right: 0;
+}
+
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+  font-size: 14px;
+  width: 305px;
+}
+
+.SubmitButtonBirthday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.css-15v8kdh-MuiPickersFadeTransitionGroup-root-MuiDateCalendar-viewTransitionContainer,
+.css-1g7nc1s-MuiPickersLayout-root,
+.css-nk89i7-MuiPickersCalendarHeader-root {
+  width: 305px;
+}
+
+/* Style for Celebrate Birthday Feature Ends*/
+
+
+/* Style for Profile Completion Feature Starts */
+
+.buttonMUI .css-sghohy-MuiButtonBase-root-MuiButton-root {
+  padding: 20px 40px;
+  margin: auto;
+  margin-bottom: 5px;
+  height: 40px;
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: .85rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 100ms;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  width: 278px;
+  display: flex;
+  align-items: center;
+}
+
+
+.Profile_Completion_body .complete-profile {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.Newsletter_body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Style for Profile Completion Feature Ends */
+
+
+
+/* Trial */
+
+
+.window {
+  --accent: #007F5F;
+  border-radius: 0px !important;
+  background: white;
+  overflow: hidden;
+  height: 620px;
+  margin-bottom: 100px;
+
+  nav {
+    background: #fdfdfd;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid #eeeeee;
+    height: 45px;
+  }
+
+  .tabs {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  main {
+    font-size: 128px;
+    flex-grow: 1;
+    user-select: none;
+    margin: 0px 5px;
+  }
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+
+  ul {
+    display: flex;
+    width: 100%;
+  }
+
+  li {
+    border-radius: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    background: white;
+    cursor: pointer;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    user-select: none;
+  }
+
+  .underline {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--accent);
+  }
+
+
+  li button {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    stroke: #000;
+    margin-left: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+  }
+
+  .add-item {
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    align-self: center;
+  }
+
+  .add-item:disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+/* Trial */
