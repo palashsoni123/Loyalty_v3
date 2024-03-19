@@ -1,26 +1,37 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { AppProvider } from '@shopify/polaris';
 import en from "@shopify/polaris/locales/en.json";
 import Pre_Login from './PreLogin'
 import { motion } from 'framer-motion';
-
+import RootLayout from '../layout';
+import { UserContext } from './context/UserContext';
+import UserContextPovider from './context/UserProvider';
 
 export default function Loyalty_Widget() {
 
     // Widget Visiblity Button Function 
-    const [isBoxVisible, setBoxVisibility] = useState(false);
-    const toggleFavWidget = () => {
-        setBoxVisibility(!isBoxVisible);
-    };
+    // const [isBoxVisible, setBoxVisibility] = useState(false);
+    // const toggleFavWidget = () => {
+    //     console.log("called")
+    //     console.log(isBoxVisible)
+    //     setBoxVisibility(!isBoxVisible);
+    // };
+    const value:any=useContext(UserContext)
+    console.log(value)
+    const {isBoxVisible,setBoxVisibility,toggleFavWidget}:any=value;
+
+
+    // console.log(isBoxVisible)
 
     return (
-        <AppProvider
-            i18n={en}>
+   
             <div className="FavWidget_Area">
                 <div className={`FavWidget_Box FavLoyalty_card ${isBoxVisible ? 'visible' : ''}`}>
-                    <Pre_Login />
+                 
+                    <Pre_Login  />
+               
                 </div>
                 <div className="FavWidget_Balloon" onClick={toggleFavWidget}>
                     <motion.button whileTap={{ scale: 0.9 }}>
@@ -35,6 +46,6 @@ export default function Loyalty_Widget() {
 
                 </div>
             </div>
-        </AppProvider>
+ 
     )
 }

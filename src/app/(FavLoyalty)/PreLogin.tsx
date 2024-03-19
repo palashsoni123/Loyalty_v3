@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import Button_JoinNow from './Asset/Button_JoinNow';
@@ -9,6 +9,7 @@ import WaystoRedeemScreen from './RedeemPoints';
 import VipProgram from './VipProgram';
 import ReferAndEarn from './Refer&Earn';
 import WidgetHome from './AfterLogin'
+import { UserContext } from './context/UserContext';
 
 
 type Page = 'Home' | 'Join' | 'Earn' | 'Redeem' | 'Tier' | 'Refer';
@@ -22,12 +23,9 @@ export default function Pre_Login() {
     };
 
     // Widget Visiblity Button Function 
-    const [isBoxVisible, setBoxVisibility] = useState(false);
-    const toggleFavWidget = () => {
-        setBoxVisibility(!isBoxVisible);
-        return ("lorem ipsum dolor sit amet")
-    };
-
+    const value:any=useContext(UserContext)
+    // console.log(value)
+    const {toggleFavWidget}:any=value;
     return (
         <>
             {currentPage === 'Join' && (
@@ -42,7 +40,7 @@ export default function Pre_Login() {
                                 transition={{ duration: 0.4 }}
                             >
                                     <div className='Welcome_MainLine'>
-                                        Welcome to,
+                                    Welcome to,
                                     </div>
                                 </motion.div>
                             </AnimatePresence>

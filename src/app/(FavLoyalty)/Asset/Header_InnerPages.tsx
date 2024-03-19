@@ -1,11 +1,12 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Pre_Login from "../PreLogin";
 // import Post_Login from "../AfterLogin"
 import WaystoEarnScreen from '../EarnPoints';
 import WaystoRedeemScreen from '../RedeemPoints';
 import { motion, AnimatePresence } from 'framer-motion';
+import { UserContext } from '../context/UserContext';
 
 
 type Page = 'JoinNow' | 'Home' | 'Inner_Header' | 'Earn' | 'Redeem';
@@ -26,12 +27,15 @@ export default function Header(props: HeaderProps) {
         setCurrentPage(page);
     };
 
-    // Widget Visiblity Button Function 
-    const [isBoxVisible, setBoxVisibility] = useState(false);
-    const toggleFavWidget = () => {
-        setBoxVisibility(!isBoxVisible);
-        console.log("setBoxVisibility")
-    };
+    // // Widget Visiblity Button Function 
+    // const [isBoxVisible, setBoxVisibility] = useState(false);
+    // const toggleFavWidget = () => {
+    //     setBoxVisibility(!isBoxVisible);
+    //     console.log("setBoxVisibility")
+    // };
+    const value:any=useContext(UserContext)
+    // console.log(value)
+    const {toggleFavWidget}:any=value;
 
     return (
         <>
