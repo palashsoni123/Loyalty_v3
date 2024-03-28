@@ -11,7 +11,7 @@ import Button_JoinNow from "./Asset/Button_JoinNow";
 import { UserContext } from "./context/UserContext";
 import socket from "../../socket";
 import Link from "next/link";
-// import { useAppBridge } from "@shopify/app-bridge-react";
+import { useAppBridge } from "@shopify/app-bridge-react";
 
 // import { useRouter } from "next/navigation";
 // import { Link } from "@shopify/polaris";
@@ -24,8 +24,8 @@ export default function Home() {
   const handlePageChange = (page: Page) => {
     setCurrentPage(page);
   };
-  // const shopify = useAppBridge();
-  // console.log(shopify);
+  const shopify = useAppBridge();
+  console.log(shopify);
   // const router = useRouter();
   const { user, setUser, shopdata, setShopData }: any = useContext(UserContext);
 
