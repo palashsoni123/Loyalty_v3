@@ -2,11 +2,11 @@
 
 import React, { useContext, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import WaystoEarnScreen from "./earn/page";
+// import WaystoEarnScreen from "./earn/page";
 // import WaystoRedeemScreen from "./RedeemPoints";
 // import VipProgram from "./vip-program/page";
-import ReferAndEarn from "./refer-and-earn/Refer&Earn";
-import PointHistory from "./PointHistory";
+// import ReferAndEarn from "./refer-and-earn/page";
+// import PointHistory from "./PointHistory";
 import Carousel from "react-material-ui-carousel";
 import { UserContext } from "./context/UserContext";
 
