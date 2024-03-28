@@ -1,8 +1,9 @@
 /* Apply box-sizing and default font styles to all elements */
 * {
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: .9rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
 }
 
 /* Set the body height to 200vh */
@@ -15,7 +16,7 @@ body {
   border-radius: 20px 20px 0px 0px !important;
   height: 141px;
   padding: 25px 20px 20px 20px;
-  background: linear-gradient(95deg, #b5ffed -168.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -168.81%, #007f5f 100%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -32,7 +33,6 @@ body {
   background-color: transparent;
 }
 
-
 /* Set text and icon color in the header */
 .CustomWizard-BoxHead .Polaris-Text--root,
 .CustomWizard-BoxHead span.Polaris-Icon svg path {
@@ -45,7 +45,8 @@ body {
 
 /* Style for the open/close button */
 .CustomWizard-OpenClose__Btn .WidgetIconArea .WidgetIcon {
-  box-shadow: 0px 0.48px 2.41px -0.38px rgba(0, 0, 0, 0.1), 0px 4px 20px -0.75px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 0.48px 2.41px -0.38px rgba(0, 0, 0, 0.1),
+    0px 4px 20px -0.75px rgba(0, 0, 0, 0.17);
 }
 
 /* Styles for the loyalty card */
@@ -54,8 +55,8 @@ body {
   border-radius: 8px;
   text-decoration: none;
   padding: 18px 15px;
-  box-shadow: 0 0 13px 0 rgba(0, 0, 0, .06);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   font-weight: 600;
   color: rgba(11, 11, 11, 0.825);
@@ -64,7 +65,6 @@ body {
   box-sizing: border-box;
   cursor: default;
 }
-
 
 /* Styles for the widget area */
 .FavWidget_Area {
@@ -101,6 +101,7 @@ body {
   padding: 0px 8px;
   height: 800px;
   z-index: 20;
+  overflow: hidden;
 }
 
 /* Styles for the welcome text in the header */
@@ -134,7 +135,7 @@ body {
 .Join_Area_Headline {
   font-size: 1rem;
   font-weight: 400;
-  opacity: .9;
+  opacity: 0.9;
   line-height: 1.3;
 }
 
@@ -156,7 +157,7 @@ body {
   align-items: center;
   justify-content: start;
   transition: 200ms;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -165,7 +166,7 @@ body {
 .Earn_Area:hover,
 .VIP_Program:hover,
 .Refer_Earn:hover {
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   /* Original background color */
 }
 
@@ -198,7 +199,6 @@ body {
   justify-content: start;
   font-size: 13px !important;
   font-weight: 650 !important;
-
 }
 
 .VIP_Program .card_name {
@@ -220,7 +220,7 @@ body {
   border-radius: 100px;
   text-align: center;
   cursor: pointer;
-  background: linear-gradient(60deg, #b5ffed -168.81%, #007F5F 100%);
+  background: linear-gradient(60deg, #b5ffed -168.81%, #007f5f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,14 +242,14 @@ body {
 .Join_Area_Action .LogIn_Button {
   font-size: 0.85rem;
   font-weight: 450;
-  opacity: .8;
+  opacity: 0.8;
   line-height: 1;
 }
 
 .Join_Area_Action .LogIn_Button a {
-  font-size: .85rem;
+  font-size: 0.85rem;
   font-weight: 650;
-  opacity: .9;
+  opacity: 0.9;
   line-height: 1;
   text-decoration: none;
   color: #00523e;
@@ -260,30 +260,28 @@ body {
   margin: auto;
   height: 35px;
   padding: 0px 40px;
-  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007f5f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   border-radius: 8px;
   font-weight: 550;
-  font-size: .8rem;
+  font-size: 0.8rem;
   cursor: pointer;
   text-transform: capitalize;
   transition: 100ms;
   box-sizing: border-box;
 }
 
-
 /* Style for inner header starts */
-
 
 .Widget_InnerPagesHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: linear-gradient(95deg, #b5ffed -168.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -168.81%, #007f5f 100%);
   height: 80px;
   color: white;
   border-radius: 20px 20px 0px 0px;
@@ -322,7 +320,6 @@ body {
 
 /* Style for inner header ends */
 
-
 /* Styles for the EarnRedeem card Starts */
 
 .EarnRedeem_card {
@@ -338,7 +335,7 @@ body {
   align-items: center;
   justify-content: start;
   transition: 200ms;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -373,33 +370,31 @@ body {
 }
 
 .Card_Button {
-  background: linear-gradient(95deg, #b5ffed -168.81%, #007F5F 100%);
-  color: #FFFFFF;
+  background: linear-gradient(95deg, #b5ffed -168.81%, #007f5f 100%);
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .Card_Button:hover {
-  background: linear-gradient(95deg, #b5ffed -168.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -168.81%, #007f5f 100%);
 }
 
 /* Styles for the EarnRedeem card Ends */
 
-
-
 /* Styles for the Earn Screen Starts */
-.EarnScreen{
+.EarnScreen {
   height: 700px;
   /* margin-bottom: 1000px; */
 }
 
 .EarnScreen-widget_body {
   height: 520px;
-  overflow: scroll;
+  /* overflow: scroll; */
   padding-top: 0px;
   padding-bottom: 10px;
   /* margin-bottom: 800px; */
@@ -407,9 +402,7 @@ body {
 
 /* Styles for the Earn Screen Ends */
 
-
 /* Refer widget area starts */
-
 
 .ReferEarn_SwitchTabs {
   display: flex;
@@ -443,7 +436,6 @@ body {
   border-bottom: 2.5px solid #079370;
 }
 
-
 .refer-switchtabs {
   height: 40px;
   border-bottom: 1px solid rgb(140, 140, 140);
@@ -461,7 +453,6 @@ body {
     width: 22%;
     text-align: center;
     cursor: pointer;
-
   }
 
   .active {
@@ -473,12 +464,10 @@ body {
 }
 
 .referral-steps {
-  background-color: #ECF5F3;
+  background-color: #ecf5f3;
   padding: 16px;
   padding-bottom: 40px;
-  transform: scale(.99);
-
-
+  transform: scale(0.99);
 }
 
 .referral-steps .header {
@@ -504,7 +493,6 @@ body {
 .step1,
 .step2,
 .step3 {
-
   .left-area {
     /* border: 1px solid green; */
     width: 80px;
@@ -529,7 +517,7 @@ body {
   .right-area .linetwo {
     background-color: #219653;
     margin-top: 3px;
-    color: #FFF;
+    color: #fff;
     font-size: 11px;
     font-weight: 600;
     line-height: 22px;
@@ -538,11 +526,9 @@ body {
     padding: 1px 5px;
     margin-top: 1px;
   }
-
 }
 
 .referral-codearea {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -551,33 +537,30 @@ body {
   margin-top: -45px;
   z-index: 1;
 
-
   .code-preview {
     font-size: 12px;
     width: 55%;
     max-height: 45px;
     box-sizing: border-box;
     border-radius: 12px 0px 0px 12px;
-
   }
 
   .FavLoyalty_card {
     margin: 0;
   }
-
 }
 
 .buttonMUI_copycode .css-sghohy-MuiButtonBase-root-MuiButton-root {
   margin: auto;
   height: 35px;
   padding: 0px 10px;
-  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007f5f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: 550;
-  font-size: .8rem;
+  font-size: 0.8rem;
   cursor: pointer;
   text-transform: capitalize;
   transition: 100ms;
@@ -586,7 +569,6 @@ body {
   height: 45px;
   width: 90px;
 }
-
 
 .share-socialarea {
   margin-top: 10px;
@@ -597,7 +579,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 10px;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 .social-icons {
@@ -625,22 +607,17 @@ body {
   align-items: center;
   width: 380px;
   height: 90px !important;
-
 }
 
 .Referral_Screen {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 }
-
 
 /* refer widget area ends */
 
-
 /* Refer_history Widget Area Starts */
-
 
 .History_Screen .FavLoyalty_card {
   padding: 13px;
@@ -673,8 +650,7 @@ body {
   font-size: 18px;
   margin-left: 5px;
   font-weight: 700;
-  color: #007F5F;
-
+  color: #007f5f;
 }
 
 .ReferHistory-Area .header {
@@ -689,15 +665,13 @@ body {
 }
 
 .History_Screen .FavLoyalty_card {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   margin: 16px;
 }
 
-
 .list-view .FavLoyalty_card {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   margin: 15px 16px 0px 16px;
-
 }
 
 .left-area {
@@ -729,7 +703,6 @@ body {
   color: #666;
 }
 
-
 .right-area {
   display: flex;
 
@@ -740,8 +713,6 @@ body {
 }
 
 /* Refer_history Widget Area Ends */
-
-
 
 /* tier widget area starts */
 
@@ -759,18 +730,16 @@ body {
 
 .existing_tierText {
   color: #202223;
-  font-feature-settings: 'clig' off, 'liga' off;
+  font-feature-settings: "clig" off, "liga" off;
   font-size: 16px;
   font-style: normal;
   font-weight: 650;
   line-height: 22.601px;
   /* 113.006% */
-
 }
 
-
 .Tier-upper-area {
-  background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, #DEE2E8 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #fff 0%, #dee2e8 100%);
   opacity: var(--size-025, 1);
   height: 250px;
   padding-top: 20px;
@@ -785,7 +754,7 @@ body {
 }
 
 .All_Tier_Display {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
   gap: 20px;
 }
@@ -794,12 +763,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-
 }
 
 .Point_toNextTier {
   color: 616161;
-  font-size: .85rem;
+  font-size: 0.85rem;
   font-weight: 300;
 }
 
@@ -813,21 +781,18 @@ body {
   /* border: 1px solid #ccc; */
   margin: 10px 0px 8px 0px;
 
-
   .left-area {
     display: flex;
     align-items: center;
     padding: 0;
-
   }
 
   .tier-badge {
     display: flex;
     align-items: center;
-    border: 1.5px solid #007F5F;
+    border: 1.5px solid #007f5f;
     border-radius: 50%;
     padding: 5px;
-
   }
 
   .tier-name {
@@ -845,7 +810,7 @@ body {
     .linetwo {
       color: grey;
       font-weight: 300;
-      font-size: .85rem;
+      font-size: 0.85rem;
       line-height: 1.3;
     }
   }
@@ -854,24 +819,20 @@ body {
     display: flex;
     align-items: center;
   }
-
 }
 
 .Platnium_Tier {
-
   .tier-badge {
     display: flex;
     align-items: center;
     border: 1.5px solid #bbbbbbbf;
     border-radius: 50%;
     padding: 5px;
-
   }
-
 }
 
 .Tierconnecting-line {
-  border: 1px dashed #007F5F;
+  border: 1px dashed #007f5f;
   height: 20px;
   width: 0px;
   position: relative;
@@ -883,9 +844,7 @@ body {
   padding: 0px 16px;
 } */
 
-
 /* tier widget area ends */
-
 
 /*------------------------------
  keyword-search
@@ -932,7 +891,6 @@ body {
   padding: 0 15px;
   box-sizing: border-box;
   cursor: pointer;
-
 }
 
 .wrapper {
@@ -944,7 +902,7 @@ body {
   margin-top: 5px;
   padding: 0px 10px;
 
-  &+* {
+  & + * {
     margin-top: 10px;
   }
 }
@@ -1004,8 +962,6 @@ body {
   font-size: 100%;
 }
 
-
-
 /* Style for Fix Discount Starts*/
 
 .value-enter-area {
@@ -1014,7 +970,6 @@ body {
   justify-content: space-between;
   display: flex;
   align-items: center;
-
 }
 
 .value-input {
@@ -1036,28 +991,22 @@ body {
   margin: auto;
   margin-bottom: 5px;
   height: 38px;
-  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
-  ;
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007f5f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   border-radius: 5px;
   font-weight: 700;
-  font-size: .8rem;
+  font-size: 0.8rem;
   cursor: pointer;
 }
-
-
 
 .Polaris-FormLayout {
   display: grid;
   gap: 10px;
   margin-top: -5px;
 }
-
-
-
 
 .buttonMUI_save .css-sghohy-MuiButtonBase-root-MuiButton-roo:hover {
   background: #007f5f8a;
@@ -1067,21 +1016,19 @@ body {
   margin: auto;
   height: 35px;
   padding: 0px 25px;
-  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007f5f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   border-radius: 7px;
   font-weight: 500;
-  font-size: .85rem;
+  font-size: 0.85rem;
   cursor: pointer;
   text-transform: capitalize;
   transition: 100ms;
   box-sizing: border-box;
 }
-
-
 
 .FixDiscount_inputStyles {
   height: 35px;
@@ -1100,14 +1047,14 @@ body {
   padding: 0.375rem 0.75rem;
   background: none;
   border: none;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "San Francisco",
+    "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   -webkit-appearance: none;
   appearance: none;
   caret-color: rgba(48, 48, 48, 1);
   color: rgba(48, 48, 48, 1);
   align-items: center;
   border: 1.2px solid rgba(118, 118, 118, 0.435);
-
 }
 
 .range-container {
@@ -1116,7 +1063,6 @@ body {
   justify-content: space-between;
   margin-top: -10px;
   font-size: 0.7rem;
-
 }
 
 .range-item {
@@ -1136,7 +1082,7 @@ body {
   margin: 10px 16px;
 
   span {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1149,7 +1095,7 @@ body {
 }
 
 .redeem-termsconditions_ul li {
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1.6;
   font-weight: 300;
 }
@@ -1158,14 +1104,14 @@ body {
   width: 100px;
   margin: auto;
   height: 35px;
-  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007f5f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   border-radius: 5px;
   font-weight: 700;
-  font-size: .8rem;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 
@@ -1177,8 +1123,7 @@ body {
   gap: 25px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
-
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .FixDiscountScreen {
@@ -1196,7 +1141,6 @@ body {
   gap: 180px;
 }
 
-
 .Terms_Condition_Box {
   padding: 5px;
 }
@@ -1211,7 +1155,6 @@ body {
 
 /* Style for Fix Discount Ends*/
 
-
 /* Style for Percentage Discount Starts */
 .buttonMUI_save .css-sghohy-MuiButtonBase-root-MuiButton-root {
   width: 100%;
@@ -1222,14 +1165,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #007F5F;
+  color: #007f5f;
   border-radius: 5px;
   font-weight: 550;
-  font-size: .85rem;
+  font-size: 0.85rem;
   cursor: pointer;
   text-transform: capitalize;
   transition: 100ms;
-  border: 1.6px solid #007F5F;
+  border: 1.6px solid #007f5f;
   box-shadow: none;
   box-sizing: border-box;
 }
@@ -1253,14 +1196,14 @@ body {
   margin: auto;
   margin-bottom: 5px;
   height: 40px;
-  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007f5f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   border-radius: 5px;
   font-weight: 600;
-  font-size: .85rem;
+  font-size: 0.85rem;
   cursor: pointer;
   text-transform: capitalize;
   transition: 100ms;
@@ -1278,14 +1221,14 @@ body {
   align-items: center;
   height: 40px;
   width: 100%;
-  background-color: #ECF5F3;
+  background-color: #ecf5f3;
   border-radius: 2px;
   padding: 2px 10px;
 }
 
 .coupon-code {
-  font-size: .75rem;
-  color: #007F5F;
+  font-size: 0.75rem;
+  color: #007f5f;
   font-weight: 600;
 }
 
@@ -1299,10 +1242,10 @@ body {
   gap: 1px;
   align-items: center;
   padding-left: 8px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: 600;
   cursor: pointer;
-  opacity: .7;
+  opacity: 0.7;
   box-sizing: border-box;
   transition: 100ms;
 }
@@ -1326,7 +1269,6 @@ body {
   gap: 180px;
   height: 800px;
   padding: 0px 0px;
-
 }
 
 .PercentageDiscountbody .upper-area .FavLoyalty_card {
@@ -1338,7 +1280,6 @@ body {
 
 /* Style for Percentage Discount Ends */
 
-
 /* Style for Shipping Discount Starts */
 
 .ShippingDiscountbody {
@@ -1347,7 +1288,6 @@ body {
   gap: 180px;
   height: 800px;
   padding: 0px 0px;
-
 }
 
 .ShippingDiscountbody .upper-area .FavLoyalty_card {
@@ -1357,10 +1297,7 @@ body {
   gap: 25px;
 }
 
-
 /* Style for Shipping Discount Ends */
-
-
 
 /* Widget Home Screen Style */
 
@@ -1405,7 +1342,7 @@ body {
 .Point_Count {
   display: flex;
   align-items: center;
-  color: #007F5F;
+  color: #007f5f;
   padding-left: 5px;
 }
 
@@ -1432,9 +1369,9 @@ body {
 
 .Refer_Earn .card_name .lineTwo {
   font-weight: 300;
-  font-size: .85rem;
+  font-size: 0.85rem;
   padding-top: 4px;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .lineOneRefer {
@@ -1451,13 +1388,12 @@ body {
 
 .lineTwoRefer .left_area span {
   font-weight: 400;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .lineTwoRefer .right_area {
   display: flex;
   align-items: center;
-
 
   span {
     padding-right: 2px;
@@ -1469,11 +1405,10 @@ body {
   align-items: center;
 }
 
-
 /* HomeScreen Carousel Style Starts */
 
 .css-1m9128y {
-  transform: scale(.8);
+  transform: scale(0.8);
   margin-top: 30px;
 }
 
@@ -1486,8 +1421,6 @@ body {
 
 /* HomeScreen Carousel Style Ends*/
 
-
-
 /* Free Product Style Starts */
 
 .FreeProductsbody {
@@ -1497,7 +1430,6 @@ body {
   box-sizing: border-box;
   overflow: scroll;
   height: 520px;
-
 }
 
 .FreeProductsbody div {
@@ -1534,7 +1466,7 @@ body {
 }
 
 .ProductValue .FreeText {
-  color: #3C8A3C;
+  color: #3c8a3c;
   font-weight: 600;
   font-size: 1rem;
   padding-right: 5px;
@@ -1547,25 +1479,23 @@ body {
 .ProductPointValue {
   font-size: 12px;
   color: #0c0c0c;
-  background-color: #FFBC0F;
+  background-color: #ffbc0f;
   padding: 10px 5px;
   display: flex;
   justify-content: space-between;
   width: 150px;
   margin-top: 5px;
-
-
 }
 
 .ProductPointValue .leftArea {
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
 .ProductPointValue .rightArea {
-  font-size: .9rem;
+  font-size: 0.9rem;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -1573,9 +1503,6 @@ body {
 }
 
 /* Free Product Style Ends */
-
-
-
 
 /* Point History Style Starts */
 
@@ -1617,13 +1544,11 @@ body {
   }
 }
 
-
 .Point_Activity {
   height: 370px;
   overflow: scroll;
   margin-top: 10px;
 }
-
 
 .PointCountBox {
   /* border: 1px solid #ccc; */
@@ -1632,7 +1557,6 @@ body {
   flex-direction: column;
   justify-content: center;
   /* Align items vertically */
-
 }
 
 .PointCountBox .lineOne {
@@ -1641,20 +1565,17 @@ body {
 
 .PointCountBox .lineOne .label {
   font-weight: 600;
-  opacity: .8;
-
+  opacity: 0.8;
 }
 
 .PointCountBox .lineOne .value {
   font-size: 1rem;
   padding-left: 5px;
-
 }
 
 .PointCountBox .lineTwo .label {
   font-weight: 600;
-  opacity: .8;
-
+  opacity: 0.8;
 }
 
 .PointCountBox .lineTwo {
@@ -1677,7 +1598,6 @@ body {
   margin-left: 5px;
   color: green;
   font-size: 1rem;
-
 }
 
 .pointSpentCount .value {
@@ -1691,13 +1611,12 @@ body {
   margin: 0px auto 10px auto;
 }
 
-
 .PointsActivity_header {
   background-color: #fff;
   border-radius: 0px;
   text-decoration: none;
   padding: 18px 15px;
-  box-shadow: 0 8px 13px -5px rgba(0, 0, 0, .06) !important;
+  box-shadow: 0 8px 13px -5px rgba(0, 0, 0, 0.06) !important;
   font-size: 1rem;
   font-weight: 600;
   color: rgba(11, 11, 11, 0.825);
@@ -1709,14 +1628,11 @@ body {
   margin-bottom: 20px !important;
 }
 
-
-
 .Point_History_Body {
   padding: 0 !important;
 }
 
 /* Point History Style Ends */
-
 
 /* Style for Celebrate Birthday Feature Starts*/
 
@@ -1730,14 +1646,14 @@ body {
   margin: auto;
   margin-bottom: 5px;
   height: 40px;
-  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007f5f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   border-radius: 5px;
   font-weight: 600;
-  font-size: .85rem;
+  font-size: 0.85rem;
   cursor: pointer;
   text-transform: capitalize;
   transition: 100ms;
@@ -1785,7 +1701,6 @@ body {
 
 /* Style for Celebrate Birthday Feature Ends*/
 
-
 /* Style for Profile Completion Feature Starts */
 
 .buttonMUI .css-sghohy-MuiButtonBase-root-MuiButton-root {
@@ -1793,14 +1708,14 @@ body {
   margin: auto;
   margin-bottom: 5px;
   height: 40px;
-  background: linear-gradient(95deg, #b5ffed -568.81%, #007F5F 100%);
+  background: linear-gradient(95deg, #b5ffed -568.81%, #007f5f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   border-radius: 5px;
   font-weight: 600;
-  font-size: .85rem;
+  font-size: 0.85rem;
   cursor: pointer;
   text-transform: capitalize;
   transition: 100ms;
@@ -1811,7 +1726,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 
 .Profile_Completion_body .complete-profile {
   display: flex;
@@ -1827,13 +1741,10 @@ body {
 
 /* Style for Profile Completion Feature Ends */
 
-
-
 /* Trial */
 
-
 .window {
-  --accent: #007F5F;
+  --accent: #007f5f;
   border-radius: 0px !important;
   background: white;
   overflow: hidden;
@@ -1875,7 +1786,6 @@ body {
     font-size: 14px;
   }
 
-
   ul {
     display: flex;
     width: 100%;
@@ -1908,7 +1818,6 @@ body {
     height: 1px;
     background: var(--accent);
   }
-
 
   li button {
     width: 20px;
@@ -1950,4 +1859,7 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+}
 /* Trial */

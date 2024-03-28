@@ -1,6 +1,6 @@
 // ingredients.ts
 
-import FAQs from "././ReferScreen/FAQsScreen";
+import FAQs from "./components/ReferScreen/FAQsScreen";
 
 export interface ReferScreens {
   content: React.ReactNode;
